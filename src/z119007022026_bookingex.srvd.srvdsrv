@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Booking Extented'
+define service Z119007022026_BOOKINGEX {
+  expose ZC_07022026_BookingExtended;
+}

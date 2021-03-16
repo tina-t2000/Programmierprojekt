@@ -1,0 +1,52 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{ 
+    typeName: 'Booking',
+    typeNamePlural: 'Bookings'}
+
+@Search.searchable: true    
+annotate view ZC_07022026_BookingExtended
+    with 
+{
+  @UI.facet: [{ type: #IDENTIFICATION_REFERENCE, label: 'Booking' }]
+  
+  @UI:{
+        selectionField: [{ position: 20 }],
+        lineItem: [{ position: 20 }],
+        identification: [{ position: 20 }]
+  }
+  @Search.defaultSearchElement: true
+  TravelId;
+  
+  @UI:{
+        selectionField: [{ position: 30 }],
+        lineItem: [{ position: 30 }],
+        identification: [{ position: 30 }]
+  }
+  @Search.defaultSearchElement: false
+  BookingId;
+ 
+  @UI:{
+        selectionField: [{ position: 40 }],
+        lineItem: [{ position: 40 }],
+        identification: [{ position: 40 }]
+  }
+  @Search.fuzzinessThreshold: 0.75
+  @Search.defaultSearchElement: false
+  Connections;
+  @UI:{
+        selectionField: [{ position: 50 }],
+        lineItem: [{ position: 50 }],
+        identification: [{ position: 50 }]
+  }
+  @Search.defaultSearchElement: true
+  FlightDate;
+ 
+  @UI:{
+        selectionField: [{ position: 60 }],
+        lineItem: [{ position: 60 }],
+        identification: [{ position: 60 }]
+  }
+  @Search.defaultSearchElement: true
+  DaysAhead;
+    
+}
